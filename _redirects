@@ -1,0 +1,6 @@
+# Redirección basada en el idioma del navegador
+/   /es/   302   Language=es
+/   /en/   302   Language=en
+
+# Redirección de respaldo (si el idioma no es ni 'es' ni 'en')
+/   /es/   301
