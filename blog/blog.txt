@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | napbak</title>
+    <meta name="description" content="Explora artículos, tutoriales y noticias sobre producción musical, composición y la industria de la música.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0c0a09; color: #e2e8f0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        .header-scrolled { background-color: rgba(12, 10, 9, 0.8); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+        
+        .post-card {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+        .post-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.1), 0 4px 6px -4px rgba(139, 92, 246, 0.1);
+        }
+        .post-card .post-image-container {
+            overflow: hidden;
+        }
+        .post-card .post-image {
+            transition: transform 0.4s ease-out;
+        }
+        .post-card:hover .post-image {
+            transform: scale(1.05);
+        }
+
+        .filter-btn.active {
+            background-color: #8b5cf6;
+            color: #ffffff;
+        }
+        /* Ocultar posts por defecto para la paginación */
+        .post-card.hidden-by-pagination {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-stone-950">
+
+    <!-- ===== Header ===== -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 header-scrolled">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="/es/" class="text-2xl font-black tracking-tighter text-white">napbak</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="/es/#services" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Servicios</a>
+                <a href="/blog.html" class="text-purple-400 font-bold transition-colors duration-300">Blog</a>
+                <a href="/es/#music" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Portafolio</a>
+                <button class="open-modal-trigger bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Hablemos
+                </button>
+            </nav>
+            <div class="md:hidden flex items-center">
+                 <!-- Mobile menu button can be added here -->
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- ===== Blog Header ===== -->
+        <section class="py-16 md:py-24 text-center bg-gradient-to-b from-stone-950 via-purple-950/20 to-stone-950">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-4">Blog de Producción Musical</h1>
+                <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+                    Artículos, tutoriales y noticias para llevar tu música al siguiente nivel.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== Blog Content ===== -->
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-6">
+                
+                <!-- ===== Search and Filters ===== -->
+                <div class="mb-16">
+                    <!-- Search Bar -->
+                    <div class="max-w-xl mx-auto mb-8">
+                        <div class="relative">
+                            <input type="search" id="search-input" class="w-full bg-slate-800/50 text-white rounded-full py-3 pl-5 pr-12 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Buscar artículos...">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-4">
+                               <i class="fas fa-search text-slate-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Filter Buttons -->
+                    <div id="filter-buttons" class="flex justify-center flex-wrap gap-3">
+                        <button class="filter-btn active text-slate-300 font-semibold py-2 px-5 rounded-full border border-slate-600 hover:bg-purple-500 hover:text-white transition-colors" data-filter="all">Todos</button>
+                        <button class="filter-btn text-slate-300 font-semibold py-2 px-5 rounded-full border border-slate-600 hover:bg-purple-500 hover:text-white transition-colors" data-filter="produccion">Producción</button>
+                        <button class="filter-btn text-slate-300 font-semibold py-2 px-5 rounded-full border border-slate-600 hover:bg-purple-500 hover:text-white transition-colors" data-filter="composicion">Composición</button>
+                        <button class="filter-btn text-slate-300 font-semibold py-2 px-5 rounded-full border border-slate-600 hover:bg-purple-500 hover:text-white transition-colors" data-filter="mezcla">Mezcla y Mastering</button>
+                        <button class="filter-btn text-slate-300 font-semibold py-2 px-5 rounded-full border border-slate-600 hover:bg-purple-500 hover:text-white transition-colors" data-filter="industria">Industria Musical</button>
+                    </div>
+                </div>
+
+                <!-- Posts Grid -->
+                <div id="posts-container">
+                    <div id="posts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <!-- Post 1 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col" data-category="mezcla">
+                            <a href="#" class="block post-image-container"><img src="https://placehold.co/600x400/1e1b4b/e2e8f0?text=Post+1" alt="Imagen del post" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">MEZCLA Y MASTERING</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 7 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">5 Errores Comunes al Mezclar Voces</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Descubre los errores que la mayoría de productores cometen.</p>
+                                <a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Post 2 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col" data-category="composicion">
+                             <a href="#" class="block post-image-container"><img src="https://placehold.co/600x400/4c1d95/e2e8f0?text=Post+2" alt="Imagen del post" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">COMPOSICIÓN</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 5 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">Cómo Crear Melodías Memorables</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Una guía para construir melodías que se queden en la cabeza de tus oyentes.</p>
+                                <a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Post 3 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col" data-category="produccion">
+                             <a href="#" class="block post-image-container"><img src="https://placehold.co/600x400/1e293b/e2e8f0?text=Post+3" alt="Imagen del post" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">PRODUCCIÓN</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 8 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">Introducción a la Síntesis Sustractiva</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Aprende los fundamentos para empezar a crear tus propios sonidos desde cero.</p>
+                                <a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Post 4 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col" data-category="industria">
+                             <a href="#" class="block post-image-container"><img src="https://placehold.co/600x400/3730a3/e2e8f0?text=Post+4" alt="Imagen del post" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">INDUSTRIA MUSICAL</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 6 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">¿Necesitas un Sello Discográfico en 2024?</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Analizamos los pros y contras de la ruta independiente frente a la discográfica.</p>
+                                <a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Post 5 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col" data-category="mezcla">
+                             <a href="#" class="block post-image-container"><img src="https://placehold.co/600x400/5b21b6/e2e8f0?text=Post+5" alt="Imagen del post" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">MEZCLA Y MASTERING</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 9 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">El Arte de la Compresión Paralela</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Dale pegada y presencia a tus baterías y voces con esta técnica avanzada.</p>
+                                <a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Post 6 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col" data-category="composicion">
+                             <a href="#" class="block post-image-container"><img src="https://placehold.co/600x400/7c3aed/e2e8f0?text=Post+6" alt="Imagen del post" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">COMPOSICIÓN</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 4 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">Teoría Musical Básica para Productores</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Las escalas y acordes que necesitas conocer para empezar a componer.</p>
+                                <a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Post 7 (Initially Hidden) -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col" data-category="produccion">
+                             <a href="#" class="block post-image-container"><img src="https://placehold.co/600x400/9333ea/e2e8f0?text=Post+7" alt="Imagen del post" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">PRODUCCIÓN</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 10 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">Organiza tus Proyectos como un Pro</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Mantén tus sesiones de DAW limpias y ordenadas para un flujo de trabajo más rápido.</p>
+                                <a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+                         <!-- Post 8 (Initially Hidden) -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col" data-category="industria">
+                             <a href="#" class="block post-image-container"><img src="https://placehold.co/600x400/a855f7/e2e8f0?text=Post+8" alt="Imagen del post" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">INDUSTRIA MUSICAL</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 5 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">Cómo Registrar tus Canciones</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Protege tus derechos de autor y asegúrate de cobrar regalías por tu música.</p>
+                                <a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Load More Button -->
+                    <div class="text-center mt-16">
+                        <button id="load-more-btn" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Cargar más artículos
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ===== Footer ===== -->
+    <footer id="contact" class="bg-gradient-to-t from-purple-950/50 to-gray-900 pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left">
+                <div class="md:col-span-1">
+                    <h4 class="text-xl font-black tracking-tighter text-white mb-4 inline-block">napbak</h4>
+                    <p class="text-slate-400 mb-4">Producción musical que conecta.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Explora</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/es/#services" class="text-slate-400 hover:text-purple-400 transition-colors">Servicios</a></li>
+                        <li><a href="/blog.html" class="text-slate-400 hover:text-purple-400 transition-colors">Blog</a></li>
+                        <li><a href="/es/#music" class="text-slate-400 hover:text-purple-400 transition-colors">Mi Portafolio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Social</h4>
+                    <div class="flex space-x-4 text-2xl justify-center md:justify-start">
+                       <a href="https://open.spotify.com/artist/1mc3f2GvIm1g6f61hVvyJt" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-spotify"></i></a>
+                       <a href="https://www.instagram.com/napbakmusic" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 py-6 text-center text-slate-500">
+                <p>&copy; 2024 napbak. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterButtonsContainer = document.getElementById('filter-buttons');
+        const searchInput = document.getElementById('search-input');
+        const allPosts = Array.from(document.querySelectorAll('#posts-grid .post-card'));
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        
+        const POSTS_PER_PAGE = 6;
+        let visiblePostsCount = 0;
+        let currentlyVisiblePosts = [];
+
+        function applyFiltersAndSearch() {
+            const selectedFilter = filterButtonsContainer.querySelector('.active').dataset.filter;
+            const searchQuery = searchInput.value.toLowerCase().trim();
+
+            // 1. Ocultar todos los posts y resetear la lista visible
+            allPosts.forEach(post => post.style.display = 'none');
+            
+            // 2. Obtener la lista de posts que coinciden con los filtros
+            const filteredPosts = allPosts.filter(post => {
+                const category = post.dataset.category;
+                const title = post.querySelector('h3').textContent.toLowerCase();
+                const description = post.querySelector('p:not([class*="text-purple-400"])').textContent.toLowerCase();
+                
+                const matchesFilter = selectedFilter === 'all' || category === selectedFilter;
+                const matchesSearch = title.includes(searchQuery) || description.includes(searchQuery);
+
+                return matchesFilter && matchesSearch;
+            });
+
+            currentlyVisiblePosts = filteredPosts;
+            visiblePostsCount = 0;
+            
+            // 3. Mostrar la primera página de resultados
+            loadMorePosts();
+        }
+
+        function loadMorePosts() {
+            const postsToShow = currentlyVisiblePosts.slice(visiblePostsCount, visiblePostsCount + POSTS_PER_PAGE);
+            postsToShow.forEach(post => post.style.display = 'flex');
+            visiblePostsCount += postsToShow.length;
+
+            // 4. Gestionar la visibilidad del botón "Cargar más"
+            if (visiblePostsCount >= currentlyVisiblePosts.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'inline-block';
+            }
+        }
+
+        // --- Event Listeners ---
+        filterButtonsContainer.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                filterButtonsContainer.querySelector('.active').classList.remove('active');
+                e.target.classList.add('active');
+                applyFiltersAndSearch();
+            }
+        });
+
+        searchInput.addEventListener('input', applyFiltersAndSearch);
+        loadMoreBtn.addEventListener('click', loadMorePosts);
+
+        // --- Inicialización ---
+        applyFiltersAndSearch();
+
+        // --- Lógica del Header ---
+        const header = document.getElementById('header');
+        header.classList.add('header-scrolled');
+    });
+    </script>
+
+</body>
+</html>

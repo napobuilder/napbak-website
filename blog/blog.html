@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | napbak</title>
+    <meta name="description" content="Explora artículos, tutoriales y noticias sobre producción musical, composición y la industria de la música.">
+    
+    <!-- ===== ETIQUETAS HREFLANG PARA SEO MULTILINGÜE ===== -->
+    <link rel="alternate" hreflang="es" href="https://napbakmusic.com/es/blog/blog.html">
+    <link rel="alternate" hreflang="en" href="https://napbakmusic.com/en/blog/blog.html">
+    <link rel="alternate" hreflang="x-default" href="https://napbakmusic.com/es/blog/blog.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0c0a09; color: #e2e8f0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        .header-scrolled { background-color: rgba(12, 10, 9, 0.8); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+        
+        .post-card {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+        .post-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.1), 0 4px 6px -4px rgba(139, 92, 246, 0.1);
+        }
+        .post-card .post-image-container {
+            overflow: hidden;
+        }
+        .post-card .post-image {
+            transition: transform 0.4s ease-out;
+        }
+        .post-card:hover .post-image {
+            transform: scale(1.05);
+        }
+
+        .filter-btn.active {
+            background-color: #8b5cf6;
+            color: #ffffff;
+        }
+        .lang-switcher a { background-color: transparent; color: #e2e8f0; padding: 5px 10px; border-radius: 5px; transition: background-color 0.3s, color 0.3s; font-weight: 700; }
+        .lang-switcher a.active { background-color: #8b5cf6; color: white; }
+        .modal-content-enter { opacity: 0; transform: translateY(20px) scale(0.95); }
+        .modal-content-enter-active { opacity: 1; transform: translateY(0) scale(1); transition: opacity 300ms ease-out, transform 300ms ease-out; }
+        .modal-content-leave-active { opacity: 0; transform: translateY(20px) scale(0.95); transition: opacity 300ms ease-in, transform 300ms ease-in; }
+    </style>
+</head>
+<body class="bg-stone-950">
+
+    <!-- ===== Header (tomado de index.html) ===== -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 header-scrolled">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="../index.html" class="text-2xl font-black tracking-tighter text-white">napbak</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../index.html#services" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Servicios</a>
+                <a href="../index.html#how-it-works" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Proceso</a>
+                <a href="../index.html#music" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Portafolio</a>
+                <a href="blog.html" class="text-purple-400 font-bold transition-colors duration-300">Blog</a>
+                <button class="open-modal-trigger bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Hablemos
+                </button>
+                <div class="lang-switcher flex items-center border border-slate-600 rounded-lg ml-4">
+                    <a href="../index.html" class="active">ES</a>
+                    <a href="../en/index.html">EN</a>
+                </div>
+            </nav>
+            <div class="md:hidden flex items-center">
+                <div class="lang-switcher flex items-center border border-slate-600 rounded-lg mr-4">
+                    <a href="../index.html" class="active">ES</a>
+                    <a href="../en/index.html">EN</a>
+                </div>
+                <button class="text-white text-2xl">
+                    <i class="fas fa-bars"></i> <!-- Nota: necesitarás JS para el menú móvil -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- ===== Blog Header ===== -->
+        <section class="py-16 md:py-24 text-center bg-gradient-to-b from-stone-950 via-purple-950/20 to-stone-950">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-4">Blog de Producción Musical</h1>
+                <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+                    Artículos, tutoriales y noticias para llevar tu música al siguiente nivel.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== Blog Content ===== -->
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-6">
+                
+                <!-- ===== Search and Filters ===== -->
+                <div class="mb-16">
+                    <!-- Search Bar -->
+                    <div class="max-w-xl mx-auto mb-8">
+                        <div class="relative">
+                            <input type="search" id="search-input" class="w-full bg-slate-800/50 text-white rounded-full py-3 pl-5 pr-12 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Buscar artículos...">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-4">
+                               <i class="fas fa-search text-slate-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Filter Buttons -->
+                    <div id="filter-buttons" class="flex justify-center flex-wrap gap-3">
+                        <button class="filter-btn active text-slate-300 font-semibold py-2 px-5 rounded-full border border-slate-600 hover:bg-purple-500 hover:text-white transition-colors" data-filter="all">Todos</button>
+                        <button class="filter-btn text-slate-300 font-semibold py-2 px-5 rounded-full border border-slate-600 hover:bg-purple-500 hover:text-white transition-colors" data-filter="produccion">Producción</button>
+                        <button class="filter-btn text-slate-300 font-semibold py-2 px-5 rounded-full border border-slate-600 hover:bg-purple-500 hover:text-white transition-colors" data-filter="composicion">Composición</button>
+                        <button class="filter-btn text-slate-300 font-semibold py-2 px-5 rounded-full border border-slate-600 hover:bg-purple-500 hover:text-white transition-colors" data-filter="industria">Industria Musical</button>
+                    </div>
+                </div>
+
+                <!-- Posts Grid -->
+                <div id="posts-container">
+                    <div id="posts-grid" class="flex flex-wrap justify-center gap-8">
+                        
+                        <!-- Post 1 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col w-full sm:w-80" data-category="produccion">
+                            <a href="cuanto-cuesta-producir-una-cancion.html" class="block post-image-container"><img src="https://imgproxy.domestika.org/unsafe/w:1200/rs:fill/plain/src://blog-post-open-graph-covers/000/003/204/3204-original.png?1585519802" alt="Imagen de una computadora con software de producción musical" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">PRODUCCIÓN</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 8 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">¿Cuánto Cuesta Producir una Canción? Guía de Precios y Procesos</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Desglosamos los costos y te explicamos paso a paso el proceso de producción profesional para que sepas qué esperar.</p>
+                                <a href="cuanto-cuesta-producir-una-cancion.html" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+                        <!-- Post 2 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl flex-col w-full sm:w-80" data-category="produccion">
+                             <a href="preparar-cancion-estudio-grabacion.html" class="block post-image-container"><img src="https://ampedstudio.com/wp-content/uploads/2022/01/how-to-learn-to-sing.jpg" alt="Imagen de una persona cantando en un micrófono de estudio" class="post-image w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2"><p class="text-purple-400 text-sm font-bold">PRODUCCIÓN</p><p class="text-slate-400 text-xs font-semibold"><i class="far fa-clock mr-1"></i> 6 min</p></div>
+                                <h3 class="text-xl font-bold text-white mb-3">Prepara tu Canción para el Estudio: 5 Pasos Clave</h3>
+                                <p class="text-slate-400 text-sm flex-grow">Asegura una sesión de grabación exitosa y aprovecha al máximo tu inversión con estos consejos prácticos.</p>
+                                <a href="preparar-cancion-estudio-grabacion.html" class="text-purple-400 hover:text-purple-300 font-semibold mt-4 self-start">Leer más &rarr;</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ===== Footer (tomado de index.html) ===== -->
+    <footer id="contact" class="bg-gradient-to-t from-purple-950/50 to-gray-900 pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left">
+                <div class="md:col-span-1">
+                    <h4 class="text-xl font-black tracking-tighter text-white mb-4 inline-block">napbak</h4>
+                    <p class="text-slate-400 mb-4">Producción musical que conecta.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Explora</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/es/#services" class="text-slate-400 hover:text-purple-400 transition-colors">Servicios</a></li>
+                        <li><a href="/es/#music" class="text-slate-400 hover:text-purple-400 transition-colors">Mi Portafolio</a></li>
+                        <li><a href="/es/#how-it-works" class="text-slate-400 hover:text-purple-400 transition-colors">Mi Proceso</a></li>
+                        <li><a href="blog.html" class="text-slate-400 hover:text-purple-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Social</h4>
+                    <div class="flex space-x-4 text-2xl justify-center md:justify-start">
+                       <a href="https://open.spotify.com/artist/1mc3f2GvIm1g6f61hVvyJt" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-spotify"></i></a>
+                       <a href="https://www.instagram.com/napbakmusic" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 py-6 text-center text-slate-500">
+                <p>&copy; 2024 napbak. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL DE CONTACTO (tomado de index.html) ===== -->
+    <div id="contact-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div id="modal-content" class="bg-gradient-to-br from-stone-900 to-slate-900 border border-purple-500/20 shadow-2xl shadow-purple-500/20 rounded-2xl p-8 max-w-lg w-full relative modal-content-enter">
+            <button id="close-modal" class="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors duration-300 z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-3xl font-bold text-white mb-2 text-center">Hablemos de tu Proyecto</h2>
+            <p class="text-slate-400 text-center mb-6">Completa el formulario y te contactaré por WhatsApp.</p>
+            <form id="whatsapp-form" class="space-y-5">
+                <div>
+                    <label for="name" class="block text-slate-300 mb-2 font-semibold text-sm">Tu Nombre</label>
+                    <input type="text" id="name" name="name" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Ej: Juan Pérez">
+                </div>
+                <div>
+                    <label for="email" class="block text-slate-300 mb-2 font-semibold text-sm">Tu Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Ej: juan.perez@email.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-slate-300 mb-2 font-semibold text-sm">Cuéntame sobre tu proyecto</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Describe tu idea, género musical, si es para una película, un juego, etc."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Enviar por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Lógica del Blog (Simplificada) ---
+        const filterButtonsContainer = document.getElementById('filter-buttons');
+        const searchInput = document.getElementById('search-input');
+        const allPosts = Array.from(document.querySelectorAll('#posts-grid .post-card'));
+        
+        if (filterButtonsContainer && searchInput && allPosts.length > 0) {
+            function applyFiltersAndSearch() {
+                const selectedFilter = filterButtonsContainer.querySelector('.active').dataset.filter;
+                const searchQuery = searchInput.value.toLowerCase().trim();
+
+                allPosts.forEach(post => {
+                    const category = post.dataset.category;
+                    const title = post.querySelector('h3').textContent.toLowerCase();
+                    const description = post.querySelector('p:not([class*="text-purple-400"])').textContent.toLowerCase();
+                    
+                    const matchesFilter = selectedFilter === 'all' || category === selectedFilter;
+                    const matchesSearch = title.includes(searchQuery) || description.includes(searchQuery);
+
+                    if (matchesFilter && matchesSearch) {
+                        post.style.display = 'flex';
+                    } else {
+                        post.style.display = 'none';
+                    }
+                });
+            }
+
+            filterButtonsContainer.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    filterButtonsContainer.querySelector('.active').classList.remove('active');
+                    e.target.classList.add('active');
+                    applyFiltersAndSearch();
+                }
+            });
+
+            searchInput.addEventListener('input', applyFiltersAndSearch);
+            
+            applyFiltersAndSearch();
+        }
+
+        // --- Lógica del Modal (tomada de index.html) ---
+        const contactModal = document.getElementById('contact-modal');
+        const modalContent = document.getElementById('modal-content');
+        const openModalBtns = document.querySelectorAll('.open-modal-trigger');
+        const closeModalBtn = document.getElementById('close-modal');
+        const whatsappForm = document.getElementById('whatsapp-form');
+
+        if (contactModal && modalContent && openModalBtns.length > 0 && closeModalBtn && whatsappForm) {
+            const openModal = () => {
+                contactModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                void contactModal.offsetWidth; 
+                contactModal.classList.remove('opacity-0');
+                modalContent.classList.remove('modal-content-enter');
+                modalContent.classList.add('modal-content-enter-active');
+            };
+
+            const closeModal = () => {
+                modalContent.classList.remove('modal-content-enter-active');
+                modalContent.classList.add('modal-content-leave-active');
+                contactModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    contactModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                    modalContent.classList.remove('modal-content-leave-active');
+                    modalContent.classList.add('modal-content-enter');
+                }, 300);
+            };
+
+            openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
+            closeModalBtn.addEventListener('click', closeModal);
+            contactModal.addEventListener('click', (e) => { if (e.target === contactModal) closeModal(); });
+            window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !contactModal.classList.contains('hidden')) closeModal(); });
+            
+            whatsappForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                const phoneNumber = '584121479466'; // Reemplaza con tu número
+                let whatsappMessage = `¡Hola napbak! Soy ${name}.\n\nMi correo es: ${email}\n\nQuería hablarte sobre mi proyecto:\n"${message}"`;
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+                closeModal();
+            });
+        }
+    });
+    </script>
+
+</body>
+</html>

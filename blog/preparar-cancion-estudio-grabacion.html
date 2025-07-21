@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== METAETIQUETAS SEO PARA ESPAÑOL ===== -->
+    <title>Prepara tu Canción para el Estudio: 5 Pasos Clave</title>
+    <meta name="description" content="Asegura una sesión de grabación exitosa y aprovecha al máximo tu tiempo y dinero en el estudio. Sigue estos 5 pasos esenciales de preproducción.">
+    <meta name="keywords" content="preparar canción para grabar, preproducción musical, cómo grabar en estudio, checklist estudio de grabación, consejos para grabar música, sesión de grabación">
+
+    <!-- ===== ETIQUETAS HREFLANG PARA SEO MULTILINGÜE ===== -->
+    <link rel="alternate" hreflang="es" href="https://napbakmusic.com/es/preparar-cancion-estudio-grabacion.html">
+    <link rel="alternate" hreflang="en" href="https://napbakmusic.com/en/prepare-song-for-studio.html">
+    <link rel="alternate" hreflang="x-default" href="https://napbakmusic.com/es/preparar-cancion-estudio-grabacion.html">
+
+    <!-- ===== METAETIQUETAS Open Graph (para redes sociales) ===== -->
+    <meta property="og:title" content="Prepara tu Canción para el Estudio: 5 Pasos Clave">
+    <meta property="og:description" content="No llegues al estudio sin estar listo. Esta guía te dará los 5 pasos clave para una sesión de grabación productiva y sin estrés.">
+    <meta property="og:image" content="https://ampedstudio.com/wp-content/uploads/2022/01/how-to-learn-to-sing.jpg"> <!-- Imagen específica para este artículo -->
+    <meta property="og:url" content="https://napbakmusic.com/es/preparar-cancion-estudio-grabacion.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0c0a09; color: #e2e8f0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        .header-scrolled { background-color: rgba(12, 10, 9, 0.8); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+        
+        #reading-progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background-color: #8b5cf6;
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s ease-out;
+        }
+
+        .article-content h2 { font-size: 1.875rem; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; color: #ffffff; scroll-margin-top: 8rem; }
+        .article-content h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: #f1f5f9; scroll-margin-top: 8rem; }
+        .article-content p { line-height: 1.75; margin-bottom: 1.5rem; color: #cbd5e1; }
+        .article-content a { color: #a78bfa; text-decoration: underline; transition: color 0.2s; }
+        .article-content a:hover { color: #c4b5fd; }
+        .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-position: outside; }
+        .article-content ul { list-style-type: disc; }
+        .article-content ol { list-style-type: decimal; }
+        .article-content li { margin-bottom: 0.75rem; padding-left: 0.5rem; }
+        .article-content blockquote { border-left: 4px solid #8b5cf6; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #d1d5db; background-color: rgba(139, 92, 246, 0.05); padding-top: 1rem; padding-bottom: 1rem; border-radius: 0 8px 8px 0; }
+        .article-content .highlight-box { background-color: #1e1b4b; border: 1px solid #4c1d95; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; }
+        .article-content strong { color: #f1f5f9; font-weight: 600; }
+
+        #toc a { display: block; padding: 0.5rem 1rem; border-left: 2px solid #475569; color: #94a3b8; transition: all 0.2s ease-in-out; font-size: 0.9rem; }
+        #toc a:hover { color: #e2e8f0; border-left-color: #a78bfa; }
+        #toc a.active { color: #c4b5fd; border-left-color: #8b5cf6; transform: translateX(4px); font-weight: 600; }
+        .lang-switcher a { background-color: transparent; color: #e2e8f0; padding: 5px 10px; border-radius: 5px; transition: background-color 0.3s, color 0.3s; font-weight: 700; }
+        .lang-switcher a.active { background-color: #8b5cf6; color: white; }
+        .modal-content-enter { opacity: 0; transform: translateY(20px) scale(0.95); }
+        .modal-content-enter-active { opacity: 1; transform: translateY(0) scale(1); transition: opacity 300ms ease-out, transform 300ms ease-out; }
+        .modal-content-leave-active { opacity: 0; transform: translateY(20px) scale(0.95); transition: opacity 300ms ease-in, transform 300ms ease-in; }
+    </style>
+</head>
+<body class="bg-stone-950">
+
+    <div id="reading-progress-bar"></div>
+
+    <!-- ===== Header ===== -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 header-scrolled">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="../index.html" class="text-2xl font-black tracking-tighter text-white">napbak</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../index.html#services" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Servicios</a>
+                <a href="../index.html#how-it-works" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Proceso</a>
+                <a href="../index.html#music" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Portafolio</a>
+                <a href="blog.html" class="text-purple-400 font-bold transition-colors duration-300">Blog</a>
+                <button class="open-modal-trigger bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Hablemos
+                </button>
+                <div class="lang-switcher flex items-center border border-slate-600 rounded-lg ml-4">
+                    <a href="preparar-cancion-estudio-grabacion.html" class="active">ES</a>
+                    <a href="../en/blog/prepare-song-for-studio.html">EN</a>
+                </div>
+            </nav>
+            <div class="md:hidden flex items-center">
+                <div class="lang-switcher flex items-center border border-slate-600 rounded-lg mr-4">
+                    <a href="preparar-cancion-estudio-grabacion.html" class="active">ES</a>
+                    <a href="../en/blog/prepare-song-for-studio.html">EN</a>
+                </div>
+                <button class="text-white text-2xl">
+                    <i class="fas fa-bars"></i> <!-- Nota: necesitarás JS para el menú móvil -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <article id="article-container">
+            <!-- ===== Encabezado del Artículo ===== -->
+            <header class="py-16 md:py-24 text-center bg-gradient-to-b from-stone-950 via-purple-950/20 to-stone-950">
+                <div class="container mx-auto px-6">
+                    <a href="blog.html" class="text-purple-400 font-bold tracking-widest uppercase text-sm mb-4 inline-block">Producción</a>
+                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">Prepara tu Canción para el Estudio: 5 Pasos Clave</h1>
+                    <div class="text-slate-400 flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
+                        <span>Por napbak</span><span class="hidden md:inline mx-2">&bull;</span><span>6 de Julio, 2024</span><span class="hidden md:inline mx-2">&bull;</span><span><i class="far fa-clock mr-1"></i> 7 min de lectura</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ===== Imagen Destacada ===== -->
+            <div class="container mx-auto -mt-12 px-6">
+                 <img src="https://ampedstudio.com/wp-content/uploads/2022/01/how-to-learn-to-sing.jpg" alt="[Imagen de una persona cantando en un micrófono de estudio]" class="rounded-2xl shadow-2xl shadow-purple-950/30 w-full aspect-[2/1] object-cover">
+            </div>
+
+            <!-- ===== Contenido del Artículo y Tabla de Contenidos ===== -->
+            <div class="container mx-auto px-6 py-16 md:py-24">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+                    
+                    <!-- ===== Columna Principal: Contenido ===== -->
+                    <div class="w-full lg:w-3/4 article-content">
+                        <p class="text-xl text-slate-200 leading-relaxed">
+                            Llegar al estudio de grabación es un momento emocionante, pero también puede ser intimidante y costoso. El tiempo es dinero, y una mala preparación puede llevar a sesiones frustrantes y resultados mediocres. Para evitarlo, la clave está en la <strong>preproducción</strong>. Aquí te guiaré a través de 5 pasos esenciales para que llegues al estudio con la confianza y el material necesarios para una sesión exitosa.
+                        </p>
+
+                        <div>
+                            <h2 id="ensayo">Paso 1: Ensaya, Ensaya y Vuelve a Ensayar (con Metrónomo)</h2>
+                            <p>Puede sonar obvio, pero es el error más común. No subestimes el poder del ensayo. Debes conocer tu canción al derecho y al revés, no solo tu parte, sino cómo interactúa con los demás instrumentos. </p>
+                             <blockquote>El estudio de grabación no es una sala de ensayo. Es un lugar para capturar una interpretación pulida, no para aprenderse la canción.</blockquote>
+                            <ul>
+                                <li><strong>Usa un metrónomo:</strong> Grabar con un tempo constante es fundamental para la edición y la producción moderna. Acostúmbrate a tocar y cantar siguiendo un clic. Decide el BPM (Beats Por Minuto) exacto de tu canción antes de llegar.</li>
+                                <li><strong>Graba tus ensayos:</strong> Usa tu teléfono o una grabadora simple para escuchar tus ensayos. Esto te revelará fallos de tempo, problemas en los arreglos o partes que no funcionan tan bien como pensabas.</li>
+                                <li><strong>Practica las partes difíciles:</strong> Identifica los solos, los cambios de ritmo o las notas altas más complicadas y practícalas de forma aislada hasta que te salgan sin esfuerzo.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 id="referencias">Paso 2: Define tus Referencias y Crea una Maqueta</h2>
+                            <p>No puedes llegar al estudio y decirle al productor "quiero que suene como Tame Impala". Necesitas ser más específico. La preproducción es el momento de definir el sonido que buscas.</p>
+                             <h3>Crea una Playlist de Referencias</h3>
+                             <p>Junta 3 o 4 canciones que tengan la sonoridad, la energía o el tipo de producción que te inspira. Analízalas:</p>
+                             <ul>
+                                 <li>¿Cómo suena la batería? ¿Es seca y contundente o grande y con reverb?</li>
+                                 <li>¿La voz está al frente y clara o más integrada en la mezcla?</li>
+                                 <li>¿Qué tipo de efectos se usan en las guitarras o sintetizadores?</li>
+                             </ul>
+                             <h3>Graba una Maqueta (Demo)</h3>
+                             <p>Una maqueta es un borrador de tu canción. No tiene que sonar perfecta, pero debe contener los elementos esenciales: la estructura final, la melodía vocal principal, los acordes y el ritmo. Esto es increíblemente valioso para el productor y el ingeniero, ya que les da un mapa claro de tu visión.</p>
+                        </div>
+                        
+                        <div>
+                            <h2 id="tecnica">Paso 3: Finaliza la Letra y los Arreglos</h2>
+                            <p>El estudio no es el lugar para dudar sobre la letra de una estrofa o si un puente debería ser más largo. Todas las decisiones estructurales y líricas deben estar cerradas al 100% antes de pisar el estudio.</p>
+                             <ul>
+                                <li><strong>Imprime la letra:</strong> Lleva varias copias impresas de la letra final. Es un detalle profesional que facilita el trabajo de todos.</li>
+                                <li><strong>Define la estructura:</strong> Ten claro el mapa de tu canción: Intro, Verso 1, Coro, Verso 2, Coro, Puente, Solo, Coro final, Outro. Anótalo y compártelo.</li>
+                                <li><strong>Arreglos instrumentales:</strong> Decide qué instrumento tocará qué y en qué momento. Si hay un solo de guitarra, define su duración y en qué parte de la canción irá. Si hay armonías vocales, tenlas compuestas y ensayadas.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 id="equipo">Paso 4: Prepara tu Equipo y a Ti Mismo</h2>
+                            <p>Un equipo en mal estado puede arruinar una sesión. Realiza un mantenimiento básico para evitar problemas técnicos que te hagan perder tiempo y dinero.</p>
+                            <div class="highlight-box">
+                                <h3>Checklist de Equipo:</h3>
+                                <ul>
+                                    <li><strong>Guitarristas/Bajistas:</strong> Lleva cuerdas nuevas (puestas uno o dos días antes para que asienten), púas de repuesto, cables que sepas que funcionan bien y tu afinador.</li>
+                                    <li><strong>Bateristas:</strong> Parches en buen estado, baquetas de repuesto y, si es posible, tu propio set de platillos y caja (tarola), que son los elementos que más definen tu sonido.</li>
+                                    <li><strong>Cantantes:</strong> ¡Hidrátate! Evita el alcohol, los lácteos y la cafeína antes de la sesión. Calienta bien la voz antes de llegar al estudio.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 id="mentalidad">Paso 5: Adopta la Mentalidad Correcta</h2>
+                            <p>La preparación técnica es vital, pero la mental también. Una sesión de grabación es un maratón, no un sprint. </p>
+                            <ul>
+                                <li><strong>Sé puntual:</strong> Respeta el tiempo del estudio y del equipo.</li>
+                                <li><strong>Mantén una actitud abierta:</strong> Confía en tu productor e ingeniero. Están ahí para ayudarte a conseguir el mejor resultado posible. Escucha sus sugerencias, aunque al final la decisión sea tuya.</li>
+                                <li><strong>Descansa bien:</strong> No llegues a una sesión de 8 horas habiendo dormido solo 3. Tu energía y concentración son cruciales para una buena interpretación.</li>
+                                <li><strong>Disfruta el proceso:</strong> Has trabajado duro para llegar hasta aquí. Relájate, confía en tu preparación y disfruta de la increíble experiencia de ver cómo tu canción cobra vida.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- ===== Bloque del Autor ===== -->
+                        <div class="mt-16 pt-8 border-t border-slate-700">
+                            <div class="flex flex-col sm:flex-row items-center gap-6">
+                                <img src="https://i.imgur.com/XtzUTES.jpeg" alt="Foto de napbak" class="rounded-full w-24 h-24 object-cover border-2 border-purple-500">
+                                <div>
+                                    <p class="text-slate-400 text-sm">ESCRITO POR</p>
+                                    <h4 class="text-xl font-bold text-white mt-1">napbak</h4>
+                                    <p class="text-slate-300 mt-2">Productor musical apasionado por el sonido y la tecnología. Mi misión es ayudar a artistas a transformar sus ideas en música que emociona, conecta y destaca en el panorama actual.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Columna Lateral: Tabla de Contenidos y Compartir ===== -->
+                    <aside class="w-full lg:w-1/4 lg:sticky lg:top-28 self-start">
+                        <div class="bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                            <h4 class="text-lg font-bold text-white mb-4">En este artículo</h4>
+                            <nav id="toc" class="flex flex-col gap-1"></nav>
+                        </div>
+                        <div class="bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mt-8">
+                            <h4 class="text-lg font-bold text-white mb-4">Compartir</h4>
+                            <div id="share-buttons" class="flex items-center gap-4">
+                                <a href="#" data-sharer="twitter" title="Compartir en Twitter" class="text-slate-400 hover:text-[#1DA1F2] transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+                                <a href="#" data-sharer="facebook" title="Compartir en Facebook" class="text-slate-400 hover:text-[#1877F2] transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+                                <a href="#" data-sharer="whatsapp" title="Compartir en WhatsApp" class="text-slate-400 hover:text-[#25D366] transition-colors"><i class="fab fa-whatsapp text-2xl"></i></a>
+                                <button id="copy-link-btn" title="Copiar enlace" class="text-slate-400 hover:text-purple-400 transition-colors"><i id="copy-link-icon" class="fas fa-link text-xl"></i></button>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            
+            <!-- ===== Artículos Relacionados ===== -->
+            <section class="py-16 md:py-24 bg-stone-900/50">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">También te podría interesar</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Card 1 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-2">
+                            <a href="cuanto-cuesta-producir-una-cancion.html" class="block"><img src="https://imgproxy.domestika.org/unsafe/w:1200/rs:fill/plain/src://blog-post-open-graph-covers/000/003/204/3204-original.png?1585519802" alt="Imagen de un estudio de producción musical" class="w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow"><p class="text-purple-400 text-sm font-bold mb-2">PRODUCCIÓN</p><h3 class="text-xl font-bold text-white mb-3">¿Cuánto Cuesta Producir una Canción? Guía de Precios</h3><a href="cuanto-cuesta-producir-una-cancion.html" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">Leer más &rarr;</a></div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-2">
+                            <a href="5-errores-mezcla-voces.html" class="block"><img src="https://i0.wp.com/djpmusicschool.com/wp-content/uploads/1.jpg?resize=800%2C600&ssl=1" alt="[Imagen de una consola de mezcla de audio con faders y perillas]" class="w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow"><p class="text-purple-400 text-sm font-bold mb-2">MEZCLA Y MASTERING</p><h3 class="text-xl font-bold text-white mb-3">5 Errores Comunes al Mezclar Voces (Y Cómo Solucionarlos)</h3><a href="5-errores-mezcla-voces.html" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">Leer más &rarr;</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    
+    <!-- ===== Footer ===== -->
+    <footer id="contact" class="bg-gradient-to-t from-purple-950/50 to-gray-900 pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left">
+                <div class="md:col-span-1">
+                    <h4 class="text-xl font-black tracking-tighter text-white mb-4 inline-block">napbak</h4>
+                    <p class="text-slate-400 mb-4">Producción musical que conecta.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Explora</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html#services" class="text-slate-400 hover:text-purple-400 transition-colors">Servicios</a></li>
+                        <li><a href="../index.html#music" class="text-slate-400 hover:text-purple-400 transition-colors">Mi Portafolio</a></li>
+                        <li><a href="../index.html#how-it-works" class="text-slate-400 hover:text-purple-400 transition-colors">Mi Proceso</a></li>
+                        <li><a href="blog.html" class="text-slate-400 hover:text-purple-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Social</h4>
+                    <div class="flex space-x-4 text-2xl justify-center md:justify-start">
+                       <a href="https://open.spotify.com/artist/1mc3f2GvIm1g6f61hVvyJt" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-spotify"></i></a>
+                       <a href="https://www.instagram.com/napbakmusic" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 py-6 text-center text-slate-500">
+                <p>&copy; 2024 napbak. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL DE CONTACTO ===== -->
+    <div id="contact-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div id="modal-content" class="bg-gradient-to-br from-stone-900 to-slate-900 border border-purple-500/20 shadow-2xl shadow-purple-500/20 rounded-2xl p-8 max-w-lg w-full relative modal-content-enter">
+            <button id="close-modal" class="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors duration-300 z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-3xl font-bold text-white mb-2 text-center">Hablemos de tu Proyecto</h2>
+            <p class="text-slate-400 text-center mb-6">Completa el formulario y te contactaré por WhatsApp.</p>
+            <form id="whatsapp-form" class="space-y-5">
+                <div>
+                    <label for="name" class="block text-slate-300 mb-2 font-semibold text-sm">Tu Nombre</label>
+                    <input type="text" id="name" name="name" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Ej: Juan Pérez">
+                </div>
+                <div>
+                    <label for="email" class="block text-slate-300 mb-2 font-semibold text-sm">Tu Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Ej: juan.perez@email.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-slate-300 mb-2 font-semibold text-sm">Cuéntame sobre tu proyecto</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Describe tu idea, género musical, si es para una película, un juego, etc."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Enviar por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Lógica de la página del artículo ---
+        const progressBar = document.getElementById('reading-progress-bar');
+        const articleContainer = document.getElementById('article-container');
+        const tocContainer = document.getElementById('toc');
+        const headings = articleContainer.querySelectorAll('.article-content h2');
+
+        // --- Generar Tabla de Contenidos ---
+        const tocLinks = [];
+        if (tocContainer && headings.length > 0) {
+            headings.forEach(h => {
+                if (h.id) {
+                    const link = document.createElement('a');
+                    link.href = `#${h.id}`;
+                    link.textContent = h.textContent;
+                    tocContainer.appendChild(link);
+                    tocLinks.push(link);
+                }
+            });
+        }
+
+        // --- Observador para la Tabla de Contenidos activa ---
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (id) {
+                    const correspondingLink = tocContainer.querySelector(`a[href="#${id}"]`);
+                    if (correspondingLink) {
+                        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                            tocLinks.forEach(link => link.classList.remove('active'));
+                            correspondingLink.classList.add('active');
+                        } else {
+                            correspondingLink.classList.remove('active');
+                        }
+                    }
+                }
+            });
+        }, { rootMargin: "-30% 0px -60% 0px", threshold: 0.5 });
+        
+        headings.forEach(h => observer.observe(h));
+
+        // --- Barra de Progreso de Lectura ---
+        function updateProgressBar() {
+            if (!articleContainer || !progressBar) return;
+            const articleRect = articleContainer.getBoundingClientRect();
+            const scrollableHeight = articleContainer.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY - articleContainer.offsetTop;
+            
+            let progress = 0;
+            if (scrolled > 0 && scrollableHeight > 0) {
+                progress = (scrolled / scrollableHeight) * 100;
+            }
+            progress = Math.min(Math.max(progress, 0), 100);
+            progressBar.style.width = progress + '%';
+        }
+        window.addEventListener('scroll', updateProgressBar);
+        updateProgressBar();
+
+        // --- Botones de Compartir ---
+        const shareButtonsContainer = document.getElementById('share-buttons');
+        const copyBtn = document.getElementById('copy-link-btn');
+        
+        if (shareButtonsContainer && copyBtn) {
+            const copyIcon = document.getElementById('copy-link-icon');
+            const pageUrl = window.location.href;
+            const pageTitle = document.title;
+            
+            copyBtn.addEventListener('click', () => {
+                const el = document.createElement('textarea');
+                el.value = pageUrl;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+                
+                copyIcon.classList.remove('fa-link');
+                copyIcon.classList.add('fa-check');
+                copyBtn.title = '¡Copiado!';
+
+                setTimeout(() => { 
+                    copyIcon.classList.remove('fa-check');
+                    copyIcon.classList.add('fa-link');
+                    copyBtn.title = 'Copiar enlace';
+                }, 2000);
+            });
+
+            shareButtonsContainer.addEventListener('click', (e) => {
+                const link = e.target.closest('a[data-sharer]');
+                if (!link) return;
+                e.preventDefault();
+                const sharer = link.dataset.sharer;
+                let shareUrl = '';
+                switch(sharer) {
+                    case 'twitter': shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`; break;
+                    case 'facebook': shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`; break;
+                    case 'whatsapp': shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle)}%20${encodeURIComponent(pageUrl)}`; break;
+                }
+                if (shareUrl) { window.open(shareUrl, 'sharer', 'width=600,height=400'); }
+            });
+        }
+
+        // --- Lógica del Modal de Contacto ---
+        const contactModal = document.getElementById('contact-modal');
+        const modalContent = document.getElementById('modal-content');
+        const openModalBtns = document.querySelectorAll('.open-modal-trigger');
+        const closeModalBtn = document.getElementById('close-modal');
+        const whatsappForm = document.getElementById('whatsapp-form');
+
+        if (contactModal && modalContent && openModalBtns.length > 0 && closeModalBtn && whatsappForm) {
+            const openModal = () => {
+                contactModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                void contactModal.offsetWidth; 
+                contactModal.classList.remove('opacity-0');
+                modalContent.classList.remove('modal-content-enter');
+                modalContent.classList.add('modal-content-enter-active');
+            };
+
+            const closeModal = () => {
+                modalContent.classList.remove('modal-content-enter-active');
+                modalContent.classList.add('modal-content-leave-active');
+                contactModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    contactModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                    modalContent.classList.remove('modal-content-leave-active');
+                    modalContent.classList.add('modal-content-enter');
+                }, 300);
+            };
+
+            openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
+            closeModalBtn.addEventListener('click', closeModal);
+            contactModal.addEventListener('click', (e) => { if (e.target === contactModal) closeModal(); });
+            window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !contactModal.classList.contains('hidden')) closeModal(); });
+            
+            whatsappForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                const phoneNumber = '584121479466'; // Reemplaza con tu número
+                let whatsappMessage = `¡Hola napbak! Soy ${name}.\n\nMi correo es: ${email}\n\nQuería hablarte sobre mi proyecto:\n"${message}"`;
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+                closeModal();
+            });
+        }
+    });
+    </script>
+
+</body>
+</html>

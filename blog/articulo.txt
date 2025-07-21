@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Errores Comunes al Mezclar Voces | Blog de napbak</title>
+    <meta name="description" content="Descubre los errores que la mayoría de productores cometen al tratar voces y aprende técnicas profesionales para lograr un sonido claro, presente y pulido en tus mezclas.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0c0a09; color: #e2e8f0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        .header-scrolled { background-color: rgba(12, 10, 9, 0.8); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+        
+        #reading-progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background-color: #8b5cf6;
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s ease-out;
+        }
+
+        .article-content h2 { font-size: 1.875rem; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; color: #ffffff; scroll-margin-top: 5rem; }
+        .article-content h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: #f1f5f9; }
+        .article-content p { line-height: 1.75; margin-bottom: 1.5rem; color: #cbd5e1; }
+        .article-content a { color: #a78bfa; text-decoration: underline; transition: color 0.2s; }
+        .article-content a:hover { color: #c4b5fd; }
+        .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-position: outside; }
+        .article-content ul { list-style-type: disc; }
+        .article-content ol { list-style-type: decimal; }
+        .article-content li { margin-bottom: 0.5rem; }
+        .article-content blockquote { border-left: 4px solid #8b5cf6; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #d1d5db; }
+
+        #toc a { display: block; padding: 0.5rem 1rem; border-left: 2px solid #475569; color: #94a3b8; transition: all 0.2s ease-in-out; }
+        #toc a:hover { color: #e2e8f0; border-left-color: #a78bfa; }
+        #toc a.active { color: #c4b5fd; border-left-color: #8b5cf6; transform: translateX(4px); font-weight: 600; }
+
+        .modal-content-enter { opacity: 0; transform: translateY(20px) scale(0.95); }
+        .modal-content-enter-active { opacity: 1; transform: translateY(0) scale(1); transition: opacity 300ms ease-out, transform 300ms ease-out; }
+        .modal-content-leave-active { opacity: 0; transform: translateY(20px) scale(0.95); transition: opacity 300ms ease-in, transform 300ms ease-in; }
+    </style>
+</head>
+<body class="bg-stone-950">
+
+    <div id="reading-progress-bar"></div>
+
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 header-scrolled">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="/es/index.html" class="text-2xl font-black tracking-tighter text-white">napbak</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="/es/index.html#services" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Servicios</a>
+                <a href="/blog.html" class="text-purple-400 font-bold transition-colors duration-300">Blog</a>
+                <a href="/es/index.html#music" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Portafolio</a>
+                <button class="open-modal-trigger bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Hablemos
+                </button>
+            </nav>
+            <div class="md:hidden flex items-center">
+                 <button class="text-white text-2xl open-modal-trigger">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <article id="article-container">
+            <header class="py-16 md:py-24 text-center bg-gradient-to-b from-stone-950 via-purple-950/20 to-stone-950">
+                <div class="container mx-auto px-6">
+                    <a href="#" class="text-purple-400 font-bold tracking-widest uppercase text-sm mb-4 inline-block">Mezcla y Mastering</a>
+                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">5 Errores Comunes al Mezclar Voces (Y Cómo Solucionarlos)</h1>
+                    <div class="text-slate-400">
+                        <span>Por napbak</span><span class="mx-2">&bull;</span><span>4 de Julio, 2024</span><span class="mx-2">&bull;</span><span><i class="far fa-clock mr-1"></i> 7 min de lectura</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="container mx-auto -mt-12 px-6">
+                 <img src="https://placehold.co/1200x600/1e1b4b/e2e8f0?text=Imagen+del+Artículo" alt="Imagen destacada del artículo" class="rounded-2xl shadow-2xl shadow-purple-950/30 w-full">
+            </div>
+
+            <div class="container mx-auto px-6 py-16 md:py-24">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+                    
+                    <div class="w-full lg:w-3/4 article-content">
+                        <p class="text-xl text-slate-200">
+                            Las voces son, sin duda, el elemento más importante en la mayoría de las canciones. Son el vehículo de la emoción y la historia. Sin embargo, lograr que suenen profesionales puede ser un desafío. Aquí desglosamos cinco de los errores más comunes que los productores cometen al mezclar voces y, lo más importante, cómo puedes solucionarlos.
+                        </p>
+
+                        <div>
+                            <h2 id="preparacion">1. No Preparar la Pista Vocal (Limpieza y Edición)</h2>
+                            <p>Uno de los mayores errores es saltar directamente a la ecualización y compresión sin antes limpiar la pista. Ruidos de respiración excesivos, clics, sibilancia y ruidos de fondo pueden arruinar una mezcla.</p>
+                            <h3>Cómo solucionarlo:</h3>
+                            <ul>
+                                <li><strong>Edición Manual:</strong> Tómate el tiempo de cortar los silencios, atenuar las respiraciones que distraen y eliminar cualquier clic o pop.</li>
+                                <li><strong>De-Esser:</strong> Usa un De-Esser para controlar la sibilancia (sonidos agudos de 's' y 't'). Aplícalo con moderación.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 id="ecualizacion">2. Ecualización Excesiva o Incorrecta</h2>
+                            <p>Es tentador querer "esculpir" la voz con ecualización agresiva, pero a menudo esto resulta en un sonido poco natural. Recuerda siempre ecualizar en el contexto de la mezcla completa.</p>
+                            <blockquote>Lo que suena bien en solo puede no funcionar con los demás instrumentos.</blockquote>
+                        </div>
+                        
+                        <div>
+                            <h2 id="compresion">3. Abuso de la Compresión</h2>
+                            <p>La compresión es vital para controlar la dinámica de una voz, pero un exceso puede aplastar la vida de la interpretación, eliminando toda la emoción y naturalidad.</p>
+                        </div>
+
+                        <div>
+                            <h2 id="efectos">4. Mal Uso de Reverb y Delay</h2>
+                            <p>Los efectos de tiempo como la reverb y el delay dan espacio y profundidad a la voz, pero es fácil exagerar. Una voz ahogada en reverb sonará distante y poco profesional.</p>
+                            <h3>Cómo solucionarlo:</h3>
+                            <ol>
+                                <li><strong>Usa Envíos (Sends):</strong> Nunca insertes la reverb directamente en la pista vocal.</li>
+                                <li><strong>Pre-delay:</strong> Ajusta el pre-delay de la reverb (20-60ms) para que la voz se separe del efecto.</li>
+                                <li><strong>Ecualiza la Reverb:</strong> Corta las frecuencias bajas de la reverb para evitar que la mezcla se enturbie.</li>
+                            </ol>
+                        </div>
+
+                        <div>
+                            <h2 id="automatizacion">5. Ignorar la Automatización</h2>
+                            <p>Confiar únicamente en la compresión para nivelar una voz es un error. La automatización de volumen es la herramienta secreta de los profesionales para que cada palabra y frase se escuche perfectamente.</p>
+                        </div>
+                        
+                        <div class="mt-16 pt-8 border-t border-slate-700">
+                            <div class="flex items-center gap-6">
+                                <img src="https://placehold.co/100x100/8b5cf6/ffffff?text=N" alt="Foto de napbak" class="rounded-full w-20 h-20">
+                                <div>
+                                    <p class="text-slate-400 text-sm">ESCRITO POR</p>
+                                    <h4 class="text-xl font-bold text-white mt-1">napbak</h4>
+                                    <p class="text-slate-300 mt-2">Productor musical apasionado por el sonido y la tecnología. Ayudo a artistas a transformar sus ideas en música que emociona y conecta.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="w-full lg:w-1/4 lg:sticky lg:top-28 self-start">
+                        <div class="bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                            <h4 class="text-lg font-bold text-white mb-4">En este artículo</h4>
+                            <nav id="toc" class="flex flex-col gap-1"></nav>
+                        </div>
+                        <div class="bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mt-8">
+                            <h4 class="text-lg font-bold text-white mb-4">Compartir</h4>
+                            <div id="share-buttons" class="flex items-center gap-4">
+                                <a href="#" data-sharer="twitter" title="Compartir en Twitter" class="text-slate-400 hover:text-[#1DA1F2] transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+                                <a href="#" data-sharer="facebook" title="Compartir en Facebook" class="text-slate-400 hover:text-[#1877F2] transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+                                <a href="#" data-sharer="whatsapp" title="Compartir en WhatsApp" class="text-slate-400 hover:text-[#25D366] transition-colors"><i class="fab fa-whatsapp text-2xl"></i></a>
+                                <button id="copy-link-btn" title="Copiar enlace" class="text-slate-400 hover:text-purple-400 transition-colors"><i id="copy-link-icon" class="fas fa-link text-xl"></i></button>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            
+            <section class="py-16 md:py-24 bg-stone-900/50">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">También te podría interesar</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Card 1 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col">
+                            <a href="#" class="block"><img src="https://placehold.co/600x400/4c1d95/e2e8f0?text=Post" alt="Imagen del post" class="w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow"><p class="text-purple-400 text-sm font-bold mb-2">COMPOSICIÓN</p><h3 class="text-xl font-bold text-white mb-3">Cómo Crear Melodías Memorables</h3><a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">Leer más &rarr;</a></div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col">
+                            <a href="#" class="block"><img src="https://placehold.co/600x400/1e293b/e2e8f0?text=Post" alt="Imagen del post" class="w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow"><p class="text-purple-400 text-sm font-bold mb-2">PRODUCCIÓN</p><h3 class="text-xl font-bold text-white mb-3">Introducción a la Síntesis Sustractiva</h3><a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">Leer más &rarr;</a></div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col">
+                            <a href="#" class="block"><img src="https://placehold.co/600x400/3730a3/e2e8f0?text=Post" alt="Imagen del post" class="w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow"><p class="text-purple-400 text-sm font-bold mb-2">INDUSTRIA MUSICAL</p><h3 class="text-xl font-bold text-white mb-3">¿Necesitas un Sello Discográfico?</h3><a href="#" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">Leer más &rarr;</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    
+    <footer id="contact" class="bg-gradient-to-t from-purple-950/50 to-gray-900 pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left">
+                <div class="md:col-span-1">
+                    <h4 class="text-xl font-black tracking-tighter text-white mb-4 inline-block">napbak</h4>
+                    <p class="text-slate-400 mb-4">Producción musical que conecta.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Explora</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/es/index.html#services" class="text-slate-400 hover:text-purple-400 transition-colors">Servicios</a></li>
+                        <li><a href="/blog.html" class="text-slate-400 hover:text-purple-400 transition-colors">Blog</a></li>
+                        <li><a href="/es/index.html#music" class="text-slate-400 hover:text-purple-400 transition-colors">Mi Portafolio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Social</h4>
+                    <div class="flex space-x-4 text-2xl justify-center md:justify-start">
+                       <a href="https://open.spotify.com/artist/1mc3f2GvIm1g6f61hVvyJt" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-spotify"></i></a>
+                       <a href="https://www.instagram.com/napbakmusic" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 py-6 text-center text-slate-500">
+                <p>&copy; 2024 napbak. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL DE CONTACTO ===== -->
+    <div id="contact-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div id="modal-content" class="bg-gradient-to-br from-stone-900 to-slate-900 border border-purple-500/20 shadow-2xl shadow-purple-500/20 rounded-2xl p-8 max-w-lg w-full relative modal-content-enter">
+            <button id="close-modal" class="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors duration-300 z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-3xl font-bold text-white mb-2 text-center">Hablemos de tu Proyecto</h2>
+            <p class="text-slate-400 text-center mb-6">Completa el formulario y te contactaré por WhatsApp.</p>
+            <form id="whatsapp-form" class="space-y-5">
+                <div>
+                    <label for="name" class="block text-slate-300 mb-2 font-semibold text-sm">Tu Nombre</label>
+                    <input type="text" id="name" name="name" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Ej: Juan Pérez">
+                </div>
+                <div>
+                    <label for="email" class="block text-slate-300 mb-2 font-semibold text-sm">Tu Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Ej: juan.perez@email.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-slate-300 mb-2 font-semibold text-sm">Cuéntame sobre tu proyecto</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Describe tu idea, género musical, etc."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Enviar por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const progressBar = document.getElementById('reading-progress-bar');
+        const articleContainer = document.getElementById('article-container');
+        const tocContainer = document.getElementById('toc');
+        const headings = articleContainer.querySelectorAll('.article-content h2');
+
+        const tocLinks = [];
+        if (tocContainer) {
+            headings.forEach(h => {
+                const link = document.createElement('a');
+                link.href = `#${h.id}`;
+                link.textContent = h.textContent;
+                tocContainer.appendChild(link);
+                tocLinks.push(link);
+            });
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.target.tagName === 'H2') {
+                    const id = entry.target.getAttribute('id');
+                    if (id) {
+                        const correspondingLink = tocContainer.querySelector(`a[href="#${id}"]`);
+                        if (correspondingLink && entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                            tocLinks.forEach(link => link.classList.remove('active'));
+                            correspondingLink.classList.add('active');
+                        }
+                    }
+                }
+            });
+        }, { rootMargin: "0px 0px -50% 0px", threshold: 0.5 });
+        
+        headings.forEach(h => observer.observe(h));
+
+        function updateProgressBar() {
+            if (!articleContainer || !progressBar) return;
+            const articleRect = articleContainer.getBoundingClientRect();
+            const articleHeight = articleRect.height;
+            const windowHeight = window.innerHeight;
+            const scrollAmount = -articleRect.top;
+            const totalScrollableHeight = articleHeight - windowHeight;
+            if (scrollAmount >= 0 && scrollAmount <= totalScrollableHeight) {
+                const progress = (scrollAmount / totalScrollableHeight) * 100;
+                progressBar.style.width = progress + '%';
+            } else if (scrollAmount < 0) {
+                progressBar.style.width = '0%';
+            } else {
+                progressBar.style.width = '100%';
+            }
+        }
+        window.addEventListener('scroll', updateProgressBar);
+        updateProgressBar();
+
+        const shareButtonsContainer = document.getElementById('share-buttons');
+        const copyBtn = document.getElementById('copy-link-btn');
+        const copyIcon = document.getElementById('copy-link-icon');
+
+        if (shareButtonsContainer) {
+            const pageUrl = window.location.href;
+            const pageTitle = document.title;
+            
+            copyBtn.addEventListener('click', () => {
+                const el = document.createElement('textarea');
+                el.value = pageUrl;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+                
+                copyIcon.classList.remove('fa-link');
+                copyIcon.classList.add('fa-check');
+                copyBtn.title = '¡Copiado!';
+
+                setTimeout(() => { 
+                    copyIcon.classList.remove('fa-check');
+                    copyIcon.classList.add('fa-link');
+                    copyBtn.title = 'Copiar enlace';
+                }, 2000);
+            });
+
+            shareButtonsContainer.addEventListener('click', (e) => {
+                const link = e.target.closest('a');
+                if (!link) return;
+                e.preventDefault();
+                const sharer = link.dataset.sharer;
+                let shareUrl = '';
+                switch(sharer) {
+                    case 'twitter': shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`; break;
+                    case 'facebook': shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`; break;
+                    case 'whatsapp': shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle)}%20${encodeURIComponent(pageUrl)}`; break;
+                }
+                if (shareUrl) { window.open(shareUrl, 'sharer', 'width=600,height=400'); }
+            });
+        }
+
+        // --- Lógica del Modal ---
+        const contactModal = document.getElementById('contact-modal');
+        const modalContent = document.getElementById('modal-content');
+        const openModalBtns = document.querySelectorAll('.open-modal-trigger');
+        const closeModalBtn = document.getElementById('close-modal');
+        const whatsappForm = document.getElementById('whatsapp-form');
+
+        const openModal = () => {
+            contactModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            void contactModal.offsetWidth; 
+            contactModal.classList.remove('opacity-0');
+            modalContent.classList.remove('modal-content-enter');
+            modalContent.classList.add('modal-content-enter-active');
+        };
+
+        const closeModal = () => {
+            modalContent.classList.remove('modal-content-enter-active');
+            modalContent.classList.add('modal-content-leave-active');
+            contactModal.classList.add('opacity-0');
+            setTimeout(() => {
+                contactModal.classList.add('hidden');
+                document.body.style.overflow = '';
+                modalContent.classList.remove('modal-content-leave-active');
+                modalContent.classList.add('modal-content-enter');
+            }, 300);
+        };
+
+        openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
+        closeModalBtn.addEventListener('click', closeModal);
+        contactModal.addEventListener('click', (e) => { if (e.target === contactModal) closeModal(); });
+        window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !contactModal.classList.contains('hidden')) closeModal(); });
+        
+        whatsappForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const phoneNumber = '584121479466';
+            let whatsappMessage = `¡Hola napbak! Soy ${name}.\n\nMi correo es: ${email}\n\nQuería hablarte sobre mi proyecto:\n"${message}"`;
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+            closeModal();
+        });
+    });
+    </script>
+
+</body>
+</html>

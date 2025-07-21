@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== METAETIQUETAS SEO PARA ESPAÑOL ===== -->
+    <title>¿Cuánto Cuesta Producir una Canción? | Guía de Precios 2024</title>
+    <meta name="description" content="Descubre los factores que influyen en el costo de producción de una canción. Te damos un desglose de precios y procesos para artistas independientes y profesionales.">
+    <meta name="keywords" content="cuánto cuesta producir una canción, precio producción musical, productor musical, costos de grabación, mezcla y mastering, presupuesto musical, artista independiente">
+
+    <!-- ===== ETIQUETAS HREFLANG PARA SEO MULTILINGÜE ===== -->
+    <link rel="alternate" hreflang="es" href="https://napbakmusic.com/es/cuanto-cuesta-producir-una-cancion.html">
+    <link rel="alternate" hreflang="en" href="https://napbakmusic.com/en/how-much-to-produce-a-song.html">
+    <link rel="alternate" hreflang="x-default" href="https://napbakmusic.com/es/cuanto-cuesta-producir-una-cancion.html">
+
+    <!-- ===== METAETIQUETAS Open Graph (para redes sociales) ===== -->
+    <meta property="og:title" content="¿Cuánto Cuesta Producir una Canción? | Guía de Precios 2024">
+    <meta property="og:description" content="Un desglose completo sobre los costos de producción musical. Entiende qué esperar y cómo presupuestar tu próximo éxito.">
+    <meta property="og:image" content="https://i.imgur.com/8aV3b2s.png"> <!-- Imagen específica para este artículo -->
+    <meta property="og:url" content="https://napbakmusic.com/es/cuanto-cuesta-producir-una-cancion.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome (iconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0c0a09; color: #e2e8f0; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+        .header-scrolled { background-color: rgba(12, 10, 9, 0.8); backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+        
+        #reading-progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background-color: #8b5cf6;
+            width: 0%;
+            z-index: 100;
+            transition: width 0.1s ease-out;
+        }
+
+        .article-content h2 { font-size: 1.875rem; font-weight: 800; margin-top: 2.5rem; margin-bottom: 1rem; color: #ffffff; scroll-margin-top: 8rem; }
+        .article-content h3 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: #f1f5f9; scroll-margin-top: 8rem; }
+        .article-content p { line-height: 1.75; margin-bottom: 1.5rem; color: #cbd5e1; }
+        .article-content a { color: #a78bfa; text-decoration: underline; transition: color 0.2s; }
+        .article-content a:hover { color: #c4b5fd; }
+        .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1.5rem; list-style-position: outside; }
+        .article-content ul { list-style-type: disc; }
+        .article-content ol { list-style-type: decimal; }
+        .article-content li { margin-bottom: 0.75rem; padding-left: 0.5rem; }
+        .article-content blockquote { border-left: 4px solid #8b5cf6; padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #d1d5db; background-color: rgba(139, 92, 246, 0.05); padding-top: 1rem; padding-bottom: 1rem; border-radius: 0 8px 8px 0; }
+        .article-content .highlight-box { background-color: #1e1b4b; border: 1px solid #4c1d95; padding: 1.5rem; border-radius: 12px; margin: 2rem 0; }
+        .article-content strong { color: #f1f5f9; font-weight: 600; }
+
+        #toc a { display: block; padding: 0.5rem 1rem; border-left: 2px solid #475569; color: #94a3b8; transition: all 0.2s ease-in-out; font-size: 0.9rem; }
+        #toc a:hover { color: #e2e8f0; border-left-color: #a78bfa; }
+        #toc a.active { color: #c4b5fd; border-left-color: #8b5cf6; transform: translateX(4px); font-weight: 600; }
+        .lang-switcher a { background-color: transparent; color: #e2e8f0; padding: 5px 10px; border-radius: 5px; transition: background-color 0.3s, color 0.3s; font-weight: 700; }
+        .lang-switcher a.active { background-color: #8b5cf6; color: white; }
+        .modal-content-enter { opacity: 0; transform: translateY(20px) scale(0.95); }
+        .modal-content-enter-active { opacity: 1; transform: translateY(0) scale(1); transition: opacity 300ms ease-out, transform 300ms ease-out; }
+        .modal-content-leave-active { opacity: 0; transform: translateY(20px) scale(0.95); transition: opacity 300ms ease-in, transform 300ms ease-in; }
+    </style>
+</head>
+<body class="bg-stone-950">
+
+    <div id="reading-progress-bar"></div>
+
+    <!-- ===== Header (tomado de index.html) ===== -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 header-scrolled">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="../index.html" class="text-2xl font-black tracking-tighter text-white">napbak</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../index.html#services" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Servicios</a>
+                <a href="../index.html#how-it-works" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Proceso</a>
+                <a href="../index.html#music" class="text-slate-300 hover:text-purple-400 transition-colors duration-300">Portafolio</a>
+                <a href="blog.html" class="text-purple-400 font-bold transition-colors duration-300">Blog</a>
+                <button class="open-modal-trigger bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Hablemos
+                </button>
+                <div class="lang-switcher flex items-center border border-slate-600 rounded-lg ml-4">
+                    <a href="cuanto-cuesta-producir-una-cancion.html" class="active">ES</a>
+                    <a href="../en/blog/how-much-to-produce-a-song.html">EN</a>
+                </div>
+            </nav>
+            <div class="md:hidden flex items-center">
+                <div class="lang-switcher flex items-center border border-slate-600 rounded-lg mr-4">
+                    <a href="cuanto-cuesta-producir-una-cancion.html" class="active">ES</a>
+                    <a href="../en/blog/how-much-to-produce-a-song.html">EN</a>
+                </div>
+                <button class="text-white text-2xl">
+                    <i class="fas fa-bars"></i> <!-- Nota: necesitarás JS para el menú móvil -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <article id="article-container">
+            <!-- ===== Encabezado del Artículo ===== -->
+            <header class="py-16 md:py-24 text-center bg-gradient-to-b from-stone-950 via-purple-950/20 to-stone-950">
+                <div class="container mx-auto px-6">
+                    <a href="blog.html" class="text-purple-400 font-bold tracking-widest uppercase text-sm mb-4 inline-block">Producción</a>
+                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">¿Cuánto Cuesta Producir una Canción? Guía de Precios y Procesos</h1>
+                    <div class="text-slate-400 flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
+                        <span>Por napbak</span><span class="hidden md:inline mx-2">&bull;</span><span>5 de Julio, 2024</span><span class="hidden md:inline mx-2">&bull;</span><span><i class="far fa-clock mr-1"></i> 8 min de lectura</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ===== Imagen Destacada ===== -->
+            <div class="container mx-auto -mt-12 px-6">
+                 <img src="https://imgproxy.domestika.org/unsafe/w:1200/rs:fill/plain/src://blog-post-open-graph-covers/000/003/204/3204-original.png?1585519802" alt="Imagen de un estudio de producción musical con una computadora y monitores" class="rounded-2xl shadow-2xl shadow-purple-950/30 w-full aspect-[2/1] object-cover">
+            </div>
+
+            <!-- ===== Contenido del Artículo y Tabla de Contenidos ===== -->
+            <div class="container mx-auto px-6 py-16 md:py-24">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+                    
+                    <!-- ===== Columna Principal: Contenido ===== -->
+                    <div class="w-full lg:w-3/4 article-content">
+                        <p class="text-xl text-slate-200 leading-relaxed">
+                            "¿Cuánto cuesta producir una canción?" Esta es, sin duda, una de las primeras preguntas que se hace cualquier artista al decidir llevar su música al siguiente nivel. La respuesta corta es: <strong>depende</strong>. Pero no te preocupes, en esta guía completa desglosaremos todos los factores, procesos y rangos de precios para que tengas una idea clara y puedas planificar tu inversión de manera inteligente.
+                        </p>
+
+                        <div>
+                            <h2 id="factores">Factores Clave que Determinan el Costo</h2>
+                            <p>El precio de una producción musical no es un número fijo. Varía enormemente según una combinación de estos elementos:</p>
+                            <ul>
+                                <li><strong>Experiencia del Productor:</strong> Un productor de renombre con un historial de éxitos cobrará significativamente más que un productor emergente. Su experiencia, visión y red de contactos son parte del valor que aportan.</li>
+                                <li><strong>Complejidad del Arreglo:</strong> No es lo mismo producir una canción de cantautor (voz y guitarra) que una pista de pop con múltiples capas de sintetizadores, baterías programadas, efectos y coros. A más pistas y detalles, más tiempo y trabajo se requiere.</li>
+                                <li><strong>Músicos de Sesión:</strong> Si necesitas contratar músicos profesionales para grabar guitarras, bajo, batería, cuerdas u otros instrumentos, esto se sumará al presupuesto.</li>
+                                <li><strong>Calidad del Estudio de Grabación:</strong> El alquiler de un estudio de alta gama con equipo analógico de primera línea es más costoso que grabar en un home studio bien equipado.</li>
+                                <li><strong>Edición y Producción Vocal:</strong> La afinación de voces (con herramientas como Melodyne o Auto-Tune), la edición de tomas y la creación de armonías vocales es un trabajo minucioso que consume tiempo y requiere habilidad.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h2 id="proceso">El Proceso de Producción: Un Desglose Etapa por Etapa</h2>
+                            <p>Para entender los costos, es crucial conocer las fases de la producción. Cada una tiene su propio rol y su propio impacto en el presupuesto.</p>
+                            
+                            <h3>1. Pre-Producción</h3>
+                            <p>Es la fase de planificación. Aquí se define la estructura de la canción, el tempo, la tonalidad y la dirección artística. Se crea una maqueta o demo para tener una guía clara. <strong>Un productor puede cobrar por esta fase o incluirla en su tarifa global.</strong></p>
+
+                            <h3>2. Producción y Grabación (Tracking)</h3>
+                            <p>Aquí es donde la magia ocurre. Se graban todos los instrumentos y las voces. El costo aquí depende del tiempo de estudio y de los músicos involucrados.</p>
+
+                            <h3>3. Edición</h3>
+                            <p>Se seleccionan las mejores tomas, se corrigen errores de tiempo (cuantización), se limpian ruidos indeseados y se afina la voz principal y los coros. Es un trabajo de precisión que garantiza que todas las piezas encajen perfectamente.</p>
+
+                            <h3>4. Mezcla (Mixing)</h3>
+                            <p>El ingeniero de mezcla toma todas las pistas grabadas y las equilibra. Ajusta volúmenes, ecualización, compresión y añade efectos (reverb, delay) para crear un sonido cohesivo, claro y potente. Es el arte de hacer que todo suene bien en conjunto.</p>
+
+                            <h3>5. Masterización (Mastering)</h3>
+                            <p>Es el pulido final. Un ingeniero de masterización toma la mezcla estéreo final y la optimiza para su distribución en plataformas de streaming y otros medios. Asegura que la canción tenga un volumen competitivo y suene bien en cualquier dispositivo, desde audífonos hasta altavoces de club.</p>
+                        </div>
+
+                        <div>
+                            <h2 id="precios">Rangos de Precios: ¿Qué Esperar?</h2>
+                            <p>Aquí te presentamos tres niveles de producción para que te hagas una idea de los costos. (Precios en USD como referencia, pueden variar por país y profesional).</p>
+                            
+                            <div class="highlight-box">
+                                <h3>Nivel 1: Producción Básica o Demo ($200 - $600 por canción)</h3>
+                                <p>Ideal para artistas que empiezan o para crear maquetas de alta calidad. Generalmente incluye:</p>
+                                <ul>
+                                    <li>Producción en un home studio profesional.</li>
+                                    <li>Instrumentación basada en software (beats, sintetizadores).</li>
+                                    <li>Grabación de voz y quizás un instrumento principal (ej. guitarra).</li>
+                                    <li>Mezcla y masterización estándar.</li>
+                                </ul>
+                                <p><strong>Objetivo:</strong> Tener una canción bien estructurada y con buen sonido para mostrar a otros músicos, promotores o para un lanzamiento de bajo presupuesto.</p>
+                            </div>
+
+                            <div class="highlight-box">
+                                <h3>Nivel 2: Producción Profesional ($600 - $2,500 por canción)</h3>
+                                <p>Este es el estándar para lanzamientos independientes de alta calidad que buscan competir en el mercado actual. Puede incluir:</p>
+                                <ul>
+                                    <li>Trabajo con un productor experimentado.</li>
+                                    <li>Combinación de instrumentos virtuales y músicos de sesión.</li>
+                                    <li>Tiempo en un estudio de grabación profesional para voces y elementos clave.</li>
+                                    <li>Edición vocal detallada (afinación, alineación).</li>
+                                    <li>Mezcla y masterización por ingenieros especializados.</li>
+                                </ul>
+                                <p><strong>Objetivo:</strong> Un sonido pulido y comercial, listo para radios, playlists de Spotify y distribución profesional.</p>
+                            </div>
+
+                            <div class="highlight-box">
+                                <h3>Nivel 3: Producción Premium / de Sello Discográfico ($2,500+ por canción)</h3>
+                                <p>En este nivel, el cielo es el límite. Se busca un sonido de primer nivel mundial.</p>
+                                <ul>
+                                    <li>Productor de alto perfil.</li>
+                                    <li>Músicos de sesión de primer nivel.</li>
+                                    <li>Grabación en estudios legendarios.</li>
+                                    <li>Múltiples ingenieros para cada fase (grabación, mezcla, mastering).</li>
+                                    <li>Experimentación y tiempo sin las presiones de un presupuesto ajustado.</li>
+                                </ul>
+                                <p><strong>Objetivo:</strong> Crear un éxito con los más altos estándares de la industria.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 id="conclusion">Conclusión: Invertir en Calidad es Invertir en tu Carrera</h2>
+                            <blockquote>Producir una canción es más que solo grabar; es el proceso de transformar una idea en una obra de arte sonora que conecte con el público.</blockquote>
+                            <p>El costo de producir una canción es una inversión en tu proyecto musical. Un sonido profesional no solo aumenta tus posibilidades de ser escuchado, sino que también demuestra tu compromiso y seriedad como artista. No se trata de gastar más, sino de gastar de forma inteligente, eligiendo al equipo y el proceso que mejor se adapte a tu visión y a tus metas.</p>
+                            <p>¿Listo para llevar tu música al siguiente nivel? Me encantaría escuchar tu proyecto y ayudarte a encontrar la mejor solución para tu presupuesto y tus necesidades.</p>
+                            
+                            <div class="mt-8 text-center">
+                                <button class="open-modal-trigger bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/50">
+                                    Cotiza tu proyecto aquí
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- ===== Bloque del Autor ===== -->
+                        <div class="mt-16 pt-8 border-t border-slate-700">
+                            <div class="flex flex-col sm:flex-row items-center gap-6">
+                                <img src="https://i.imgur.com/XtzUTES.jpeg" alt="Foto de napbak" class="rounded-full w-24 h-24 object-cover border-2 border-purple-500">
+                                <div>
+                                    <p class="text-slate-400 text-sm">ESCRITO POR</p>
+                                    <h4 class="text-xl font-bold text-white mt-1">napbak</h4>
+                                    <p class="text-slate-300 mt-2">Productor musical apasionado por el sonido y la tecnología. Mi misión es ayudar a artistas a transformar sus ideas en música que emociona, conecta y destaca en el panorama actual.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== Columna Lateral: Tabla de Contenidos y Compartir ===== -->
+                    <aside class="w-full lg:w-1/4 lg:sticky lg:top-28 self-start">
+                        <div class="bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                            <h4 class="text-lg font-bold text-white mb-4">En este artículo</h4>
+                            <nav id="toc" class="flex flex-col gap-1"></nav>
+                        </div>
+                        <div class="bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mt-8">
+                            <h4 class="text-lg font-bold text-white mb-4">Compartir</h4>
+                            <div id="share-buttons" class="flex items-center gap-4">
+                                <a href="#" data-sharer="twitter" title="Compartir en Twitter" class="text-slate-400 hover:text-[#1DA1F2] transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+                                <a href="#" data-sharer="facebook" title="Compartir en Facebook" class="text-slate-400 hover:text-[#1877F2] transition-colors"><i class="fab fa-facebook-f text-2xl"></i></a>
+                                <a href="#" data-sharer="whatsapp" title="Compartir en WhatsApp" class="text-slate-400 hover:text-[#25D366] transition-colors"><i class="fab fa-whatsapp text-2xl"></i></a>
+                                <button id="copy-link-btn" title="Copiar enlace" class="text-slate-400 hover:text-purple-400 transition-colors"><i id="copy-link-icon" class="fas fa-link text-xl"></i></button>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            
+            <!-- ===== Artículos Relacionados ===== -->
+            <section class="py-16 md:py-24 bg-stone-900/50">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">También te podría interesar</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Card 1 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-2">
+                            <a href="preparar-cancion-estudio-grabacion.html" class="block"><img src="https://ampedstudio.com/wp-content/uploads/2022/01/how-to-learn-to-sing.jpg" alt="Persona cantando en un micrófono" class="w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow"><p class="text-purple-400 text-sm font-bold mb-2">PRODUCCIÓN</p><h3 class="text-xl font-bold text-white mb-3">Prepara tu Canción para el Estudio: 5 Pasos Clave</h3><a href="preparar-cancion-estudio-grabacion.html" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">Leer más &rarr;</a></div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="post-card bg-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden flex flex-col transition-transform duration-300 hover:-translate-y-2">
+                            <a href="5-errores-mezcla-voces.html" class="block"><img src="https://i0.wp.com/djpmusicschool.com/wp-content/uploads/1.jpg?resize=800%2C600&ssl=1" alt="[Imagen de una consola de mezcla de audio con faders y perillas]" class="w-full h-48 object-cover"></a>
+                            <div class="p-6 flex flex-col flex-grow"><p class="text-purple-400 text-sm font-bold mb-2">MEZCLA Y MASTERING</p><h3 class="text-xl font-bold text-white mb-3">5 Errores Comunes al Mezclar Voces (Y Cómo Solucionarlos)</h3><a href="5-errores-mezcla-voces.html" class="text-purple-400 hover:text-purple-300 font-semibold mt-auto self-start">Leer más &rarr;</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    
+    <!-- ===== Footer (tomado de index.html) ===== -->
+    <footer id="contact" class="bg-gradient-to-t from-purple-950/50 to-gray-900 pt-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left">
+                <div class="md:col-span-1">
+                    <h4 class="text-xl font-black tracking-tighter text-white mb-4 inline-block">napbak</h4>
+                    <p class="text-slate-400 mb-4">Producción musical que conecta.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Explora</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#services" class="text-slate-400 hover:text-purple-400 transition-colors">Servicios</a></li>
+                        <li><a href="index.html#music" class="text-slate-400 hover:text-purple-400 transition-colors">Mi Portafolio</a></li>
+                        <li><a href="index.html#how-it-works" class="text-slate-400 hover:text-purple-400 transition-colors">Mi Proceso</a></li>
+                        <li><a href="blog.html" class="text-slate-400 hover:text-purple-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Social</h4>
+                    <div class="flex space-x-4 text-2xl justify-center md:justify-start">
+                       <a href="https://open.spotify.com/artist/1mc3f2GvIm1g6f61hVvyJt" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-spotify"></i></a>
+                       <a href="https://www.instagram.com/napbakmusic" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-purple-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 py-6 text-center text-slate-500">
+                <p>&copy; 2024 napbak. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MODAL DE CONTACTO (tomado de index.html) ===== -->
+    <div id="contact-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <div id="modal-content" class="bg-gradient-to-br from-stone-900 to-slate-900 border border-purple-500/20 shadow-2xl shadow-purple-500/20 rounded-2xl p-8 max-w-lg w-full relative modal-content-enter">
+            <button id="close-modal" class="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors duration-300 z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-3xl font-bold text-white mb-2 text-center">Hablemos de tu Proyecto</h2>
+            <p class="text-slate-400 text-center mb-6">Completa el formulario y te contactaré por WhatsApp.</p>
+            <form id="whatsapp-form" class="space-y-5">
+                <div>
+                    <label for="name" class="block text-slate-300 mb-2 font-semibold text-sm">Tu Nombre</label>
+                    <input type="text" id="name" name="name" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Ej: Juan Pérez">
+                </div>
+                <div>
+                    <label for="email" class="block text-slate-300 mb-2 font-semibold text-sm">Tu Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Ej: juan.perez@email.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-slate-300 mb-2 font-semibold text-sm">Cuéntame sobre tu proyecto</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full bg-slate-800/50 text-white rounded-lg py-3 px-4 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all" placeholder="Describe tu idea, género musical, si es para una película, un juego, etc."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Enviar por WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Lógica de la página del artículo ---
+        const progressBar = document.getElementById('reading-progress-bar');
+        const articleContainer = document.getElementById('article-container');
+        const tocContainer = document.getElementById('toc');
+        const headings = articleContainer.querySelectorAll('.article-content h2');
+
+        // --- Generar Tabla de Contenidos ---
+        const tocLinks = [];
+        if (tocContainer && headings.length > 0) {
+            headings.forEach(h => {
+                if (h.id) {
+                    const link = document.createElement('a');
+                    link.href = `#${h.id}`;
+                    link.textContent = h.textContent;
+                    tocContainer.appendChild(link);
+                    tocLinks.push(link);
+                }
+            });
+        }
+
+        // --- Observador para la Tabla de Contenidos activa ---
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (id) {
+                    const correspondingLink = tocContainer.querySelector(`a[href="#${id}"]`);
+                    if (correspondingLink) {
+                        if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                            tocLinks.forEach(link => link.classList.remove('active'));
+                            correspondingLink.classList.add('active');
+                        } else {
+                            correspondingLink.classList.remove('active');
+                        }
+                    }
+                }
+            });
+        }, { rootMargin: "-30% 0px -60% 0px", threshold: 0.5 });
+        
+        headings.forEach(h => observer.observe(h));
+
+        // --- Barra de Progreso de Lectura ---
+        function updateProgressBar() {
+            if (!articleContainer || !progressBar) return;
+            const articleRect = articleContainer.getBoundingClientRect();
+            const scrollableHeight = articleContainer.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY - articleContainer.offsetTop;
+            
+            let progress = 0;
+            if (scrolled > 0 && scrollableHeight > 0) {
+                progress = (scrolled / scrollableHeight) * 100;
+            }
+            progress = Math.min(Math.max(progress, 0), 100);
+            progressBar.style.width = progress + '%';
+        }
+        window.addEventListener('scroll', updateProgressBar);
+        updateProgressBar();
+
+        // --- Botones de Compartir ---
+        const shareButtonsContainer = document.getElementById('share-buttons');
+        const copyBtn = document.getElementById('copy-link-btn');
+        
+        if (shareButtonsContainer && copyBtn) {
+            const copyIcon = document.getElementById('copy-link-icon');
+            const pageUrl = window.location.href;
+            const pageTitle = document.title;
+            
+            copyBtn.addEventListener('click', () => {
+                const el = document.createElement('textarea');
+                el.value = pageUrl;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+                
+                copyIcon.classList.remove('fa-link');
+                copyIcon.classList.add('fa-check');
+                copyBtn.title = '¡Copiado!';
+
+                setTimeout(() => { 
+                    copyIcon.classList.remove('fa-check');
+                    copyIcon.classList.add('fa-link');
+                    copyBtn.title = 'Copiar enlace';
+                }, 2000);
+            });
+
+            shareButtonsContainer.addEventListener('click', (e) => {
+                const link = e.target.closest('a[data-sharer]');
+                if (!link) return;
+                e.preventDefault();
+                const sharer = link.dataset.sharer;
+                let shareUrl = '';
+                switch(sharer) {
+                    case 'twitter': shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`; break;
+                    case 'facebook': shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`; break;
+                    case 'whatsapp': shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle)}%20${encodeURIComponent(pageUrl)}`; break;
+                }
+                if (shareUrl) { window.open(shareUrl, 'sharer', 'width=600,height=400'); }
+            });
+        }
+
+        // --- Lógica del Modal de Contacto (copiada de index.html) ---
+        const contactModal = document.getElementById('contact-modal');
+        const modalContent = document.getElementById('modal-content');
+        const openModalBtns = document.querySelectorAll('.open-modal-trigger');
+        const closeModalBtn = document.getElementById('close-modal');
+        const whatsappForm = document.getElementById('whatsapp-form');
+
+        if (contactModal && modalContent && openModalBtns.length > 0 && closeModalBtn && whatsappForm) {
+            const openModal = () => {
+                contactModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                void contactModal.offsetWidth; 
+                contactModal.classList.remove('opacity-0');
+                modalContent.classList.remove('modal-content-enter');
+                modalContent.classList.add('modal-content-enter-active');
+            };
+
+            const closeModal = () => {
+                modalContent.classList.remove('modal-content-enter-active');
+                modalContent.classList.add('modal-content-leave-active');
+                contactModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    contactModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                    modalContent.classList.remove('modal-content-leave-active');
+                    modalContent.classList.add('modal-content-enter');
+                }, 300);
+            };
+
+            openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
+            closeModalBtn.addEventListener('click', closeModal);
+            contactModal.addEventListener('click', (e) => { if (e.target === contactModal) closeModal(); });
+            window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !contactModal.classList.contains('hidden')) closeModal(); });
+            
+            whatsappForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                const phoneNumber = '584121479466'; // Reemplaza con tu número
+                let whatsappMessage = `¡Hola napbak! Soy ${name}.\n\nMi correo es: ${email}\n\nQuería hablarte sobre mi proyecto:\n"${message}"`;
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+                closeModal();
+            });
+        }
+    });
+    </script>
+
+</body>
+</html>
