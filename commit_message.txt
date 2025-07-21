@@ -1,0 +1,1 @@
+Add 301 redirect for /es path
